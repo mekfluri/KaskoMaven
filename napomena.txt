@@ -1,2 +1,0 @@
--Pojedini dijagrami su radjeni u StarUml-u, zbog prevelikih poteskoca,
-bagova kao i brisanja projekta, iz meni nepoznatih razloga.
