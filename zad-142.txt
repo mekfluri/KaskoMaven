@@ -1,0 +1,11 @@
+118. Informacioni sistem osiguranja automobila kasko osiguranjem – Pretpostaviti da 
+osiguravajuca kuca vodi evidenciju o svim registrovanim vozilima,
+ njihovim vlasnicima i pristiglim zahtevima za kasko osiguranjem. Zahtevi za osiguranjem se 
+podnose na šalteru. Nakon toga se prisleduju službama za 
+ dalju obradu tj. odobravanje ili odbijanje zahteva, ostvarivanje razlicitih popusta i 
+sracunavanej cene osiguranja. Placanje osiguranja vozila moguce 
+ je izvršiti elektronskim putem ili uplatom na bankovni racun osiguravajuce kuce. Svi 
+relevantni podaci cuvaju se u centralizovanoj bazi podataka.
+
+
+Obrazac: obrazac za zaposlenje

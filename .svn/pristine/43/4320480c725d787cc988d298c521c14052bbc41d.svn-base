@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:h="http://java.sun.com/jsf/html">
+      
+	<h:head>
+	<title>Osiguranje vozila</title>
+	</h:head>
+	<h:body style="text-align: center; height: 100%; background-image: url('./wallpaper.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+		<h1 style="color: black; font-size: larger">Osiguranje vozila</h1>
+		<div>
+			<h1 style="color: black; font-size: larger">Opcije</h1>
+			<div style="display: flex; flex-direction:row; justify-content: space-around; padding:10px">
+				<div>
+					<h2 style="color: black; font-size: larger">Korisnici</h2>
+					<button style="color: black; font-size: larger" onclick="location.href='./korisnik.xhtml'">Pregled</button>
+				</div>
+				<div>
+					<h2 style="color: black; font-size: larger">Vozila</h2>
+					<button style="color: black; font-size: larger" onclick="location.href='./vozilo.xhtml'">Prikazi</button>
+				</div>
+				<div>
+					<h2 style="color: black; font-size: larger">Osiguranje</h2>
+					<button style="color: black; font-size: larger" onclick="location.href='./osiguranje.xhtml'">Prikazi</button>
+				</div>
+			</div>
+		</div>
+	</h:body>
+</html>

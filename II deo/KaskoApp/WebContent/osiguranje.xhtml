@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml"
+ 	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:c="http://java.sun.com/jstl/core">
+	
+	<h:head>
+		<title>Prijava osiguranja</title>
+	</h:head>
+	<h:body style="text-align: center;
+	            background-color:#161616;
+				background-image: url('./wallpaper.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;">
+		<div>
+			<h1>Osiguranje</h1>
+			<h:form style="margin: 0 200px; display:flex; flex-direction: row; justify-content: center;">
+				<div style="margin:0 50px;">
+					<p><h:outputLabel value="JMBG" /></p>
+					<p><h:inputText value="#{OsiguranjeController.korisnikJmbg}" /></p>
+				</div>
+				<p></p>
+			</h:form>
+			<p><h:commandButton value="Ubaci osiguranje" action="#{OsiguranjeController.registrujOsiguranje(OsiguranjeController.korisnikJmbg)}" style="width: 130px; height: 25px; margin-right:65px"/></p>
+		</div>
+		<div style="margin-top: 60px; text-align: center;">
+			<h1>Brisanje</h1>
+			<div style="display:flex; justify-content:center; align-items: center;">
+				<h:outputLabel  style="margin:0 20px;" value="JMBG korisnika:"/>
+				<h:inputText value="#{OsiguranjeController.korisnikJmbg}"  style="margin:0 20px;"></h:inputText>
+				<h:commandButton  style="margin:0 20px;" value="Obrisi osiguranje" action="#{OsiguranjeController.obrisiOsiguranje(OsiguranjeController.korisnikJmbg)}"></h:commandButton>
+			</div>
+		</div>
+		
+		<div style="margin-top: 60px; text-align: center;">
+			<h1>Osiguraj Vozilo</h1>
+			<div style="display:flex; justify-content:center; align-items: center;">
+				<h:outputLabel  style="margin:0 20px;" value="JMBG:"/>
+				<h:inputText value="#{osiguranjeController.korisnikJmbg}"  style="margin:0 20px;"></h:inputText>
+				<h:outputLabel  style="margin:0 20px;" value="Broj sasije:"/>
+				<h:inputText value="#{osiguranjeController.sasija}"  style="margin:0 20px;"></h:inputText>
+				<h:commandButton  style="margin:0 20px;" value="Osiguraj" action="#{osiguranjeController.osigurajVozilo(osiguranjeController.korisnikJmbg, osiguranjeController.sasija)}"></h:commandButton>
+			</div>
+		</div>
+		
+		<h:dataTable value="#{OsiguranjeController.vrateSvaOsiguranja()}" var="o"
+    			styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,order-table-even-row"
+    			style="color:white;font-size:23px;font-weight:bold; margin-top:30px;text-shadow: 1px 1px 2px black, 0 0 15px green, 0 0 5px darkgreen; border:3px solid #a5e840; background-color:rgba(211, 239, 167,0.7);text-align:center; border-spacing: 5px; width:80%; margin-left:10%;">
+    	
+    		<h:column >
+    			<f:facet  name="header">
+    				ID
+    			</f:facet>
+    			<h:outputText value="#{o.id}"/>
+    		</h:column>
+ 
+    		<h:column>
+    			<f:facet name="header">
+    				Osigurao
+				</f:facet>
+    			<h:outputText value="#{o.platio}"/>
+    		</h:column>
+
+    		<h:column>
+    			<f:facet name="header">
+    				JMBG korisnika
+				</f:facet>
+    			<h:outputText value="#{o.korisnikJMBG}"/>
+    		</h:column>
+    	
+    	</h:dataTable>
+	</h:body>
+</html>
